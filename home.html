@@ -1,0 +1,149 @@
+﻿<!DOCTYPE html>
+
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="utf-8" />
+    <meta name="keywords" content="HTML,CSS,JavaScript, Home" />
+    <meta name="author" content="Hailey Kelavos" />
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+    <title>Semester Project</title>
+</head>
+<body>
+    <h1>Draconic Significance</h1>
+    <nav>
+        <ul class="menu">
+            <a href="home.html">Home</a>
+            <a href="dragon.html">Dragons</a>
+            <a href="drakes.html">Drakes</a>
+            <a href="eastern.html">Eastern Dragons</a>
+            <a href="wyverns.html">Wyverns</a>
+            <a href="wyrms.html">Wyrms</a>
+
+
+        </ul>
+    </nav>
+    <div class="slideshow">
+
+        <div class="slides">
+            <a href="dragon.html">
+                <img src="Dragon_Slide.jpg" style="width:100%" />
+            </a>
+            <div class="text">Dragons</div>
+        </div>
+
+        <div class="slides">
+            <a href="drakes.html">
+            <img src="Drake_Slide.jpg" style="width:100%" />
+            </a>
+            <div class="text">Drakes</div>
+        </div>
+
+        <div class="slides">
+            <a href="eastern.html">
+            <img src="Chinese_Slide.jpg" style="width:100%" />
+                </a>
+            <div class="text">Eastern</div>
+        </div>
+
+        <div class="slides">
+            <a href="wyverns.html">
+            <img src="Wyvern_Slide.jpg" style="width:100%" />
+                </a>
+            <div class="text">Wyverns</div>
+        </div>
+
+        <div class="slides">
+            <a href="wyrms.html">
+            <img src="Wyrm_Slide.jpg" style="width:100%" />
+                </a>
+            <div class="text">Wyrms</div>
+        </div>
+
+        <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+        <a class="next" onclick="plusSlides(+1)">&#10095;</a>
+    </div>
+    <br />
+    <div style="text-align:center">
+        <span class="dot" onclick="currentSlide(1)"></span>
+        <span class="dot" onclick="currentSlide(2)"></span>
+        <span class="dot" onclick="currentSlide(3)"></span>
+        <span class="dot" onclick="currentSlide(4)"></span>
+        <span class="dot" onclick="currentSlide(5)"></span>
+    </div>
+
+    <script>
+        var slideIndex = 1;
+        showSlides(slideIndex);
+
+        // Next/previous controls
+        function plusSlides(n) {
+            showSlides(slideIndex += n);
+        }
+
+        // Thumbnail image controls
+        function currentSlide(n) {
+            showSlides(slideIndex = n);
+        }
+
+        function showSlides(n) {
+            var i;
+            var slides = document.getElementsByClassName("slides");
+            var dots = document.getElementsByClassName("dot");
+            if (n > slides.length) { slideIndex = 1 }
+            if (n < 1) { slideIndex = slides.length }
+            for (i = 0; i < slides.length; i++) {
+                slides[i].style.display = "none";
+            }
+            for (i = 0; i < dots.length; i++) {
+                dots[i].className = dots[i].className.replace(" active", "");
+            }
+            slides[slideIndex - 1].style.display = "block";
+            dots[slideIndex - 1].className += " active";
+        }
+    </script>
+
+    <div class="row">
+        <div class="col-sm-6 first">
+            <p>
+                Considered one of the most iconic fantasy symbols in
+                the world, the image of the dragon was created with the express
+                purpose of striking fear and awe in the hearts of onlookers. Showing
+                up as early as 5000 B.C., stories of these beasts can be found throughout
+                the world; variants of different forms and abilities were produced as a
+                result. The word "dragon" comes from the ancient Greek word "draconta,"
+                meaning "to watch," suggesting that the beast guards treasure, such as
+                mountains of gold coins or gems. But this doesn't really make sense because
+                a creature as powerful as a dragon surely doesn't need to pay for anything,
+                right? It's probably more of a symbolic treasure, not for the hoarding dragon
+                but instead a reward for the brave knights who would vanquish the evil beast.
+            </p>
+        </div>
+        <div class="col-sm-6">
+            <p>
+                Historians believe that their origin come from the discovery of
+                dinosaur bones. Since most people didn’t think there would be a time before man,
+                they had no idea what could have left such huge fossils. Word of mouth accounts
+                to artists further cemented the image of the modern-day depiction of a dragon.
+                Legacies and folk tales wove their way into these creatures, factors like the area’s
+                culture and geographical elements further distinguishing the types. Nowadays, there
+                are more than 10 forms that can be identified as part of the draconic family.
+            </p>
+        </div>
+    </div>
+    <footer class="container-fluid text-center">
+        <a href="https://www.collin.edu/">Collin Home</a>
+        <a href="https://www.britannica.com/topic/dragon-mythological-creature">Other Sources</a>
+        <a href="https://www.instagram.com/pawsteps/">Social</a>
+        <a href="privacy.html">Privacy Policy</a>
+        <br />
+        Hailey Kelavos
+        12.2.19
+        hkelavos1@cougarmail.collin.ed
+    </footer>
+
+</body>
+</html>
